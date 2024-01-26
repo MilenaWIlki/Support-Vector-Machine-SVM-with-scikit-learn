@@ -1,0 +1,11 @@
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
+
+# Train support vector machine classifier
+model = SVC(kernel='linear', C=1)
+model.fit(X_train, y_train)
+
+# Make predictions
+predictions = model.predict(X_test)
+accuracy = accuracy_score(y_test, predictions)
+print("Support Vector Machine Accuracy:", accuracy)
